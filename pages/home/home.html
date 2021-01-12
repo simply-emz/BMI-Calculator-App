@@ -1,39 +1,39 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>Home</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Body Mass Index Calculator</h2>
-  <p>
-    There's no "perfect weight" that fits everyone. BMI, or body mass index,
-    measures how healthy your weight is based on how tall you are. It gives you
-    a clue to your risk for weight-related health problems.
-    <br />
-    <br />
+	<h2>Body Mass Index Calculator</h2>
+	<p>
+		There's no "perfect weight" that fits everyone. BMI, or body mass index,
+		measures how healthy your weight is based on how tall you are. It gives you
+		a clue to your risk for weight-related health problems.
+		<br />
+		<br />
     Source: <a href="https://www.webmd.com">https://www.webmd.com</a>
-  </p>
+	</p>
 
-  <img
+	<img
     src="https://cdn.jsdelivr.net/gh/simply-emz/BMI-Calculator-App@master/bmi-1.png"
   />
 
-  <ion-item>
-    <ion-label>Height in meter: </ion-label>
-    <ion-input type="number" [(ngModel)]="height"></ion-input>
-  </ion-item>
+	<ion-item class="ion-item-clear" lines="none">
+		<ion-label color="dark">Height in meter: </ion-label>
+		<ion-input type="number" [(ngModel)]="height"></ion-input>
+	</ion-item>
 
-  <ion-item>
-    <ion-label>Weight in kg: </ion-label>
-    <ion-input type="number" [(ngModel)]="weight"></ion-input>
-  </ion-item>
+	<ion-item class="ion-item-clear">
+		<ion-label color="dark">Weight in kg: </ion-label>
+		<ion-input type="number" [(ngModel)]="weight"></ion-input>
+	</ion-item>
 
-  <button ion-button color="primary" (click)="calculateBMI()">
+	<button ion-button color="dark" (click)="calculateBMI()">
     Calculate
   </button>
 
-  <ion-item *ngIf="bmi">
-    <h2>Your BMI is: {{bmi}} <code> ({{bmiMessage}}) </code></h2>
-  </ion-item>
+	<ion-item *ngIf="bmi">
+		<h2>Your BMI is: {{bmi}} <code> ({{bmiMessage}}) </code></h2>
+	</ion-item>
 </ion-content>

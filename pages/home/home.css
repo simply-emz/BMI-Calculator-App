@@ -11,3 +11,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: justify;
 }
+
+.ion-item-clear {
+  background: transparent;
+}
